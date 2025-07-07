@@ -1,7 +1,9 @@
 import requests
 
+# This is the API im getting data from
 url = 'https://power.larc.nasa.gov/api/temporal/daily/point'
 
+# Parameters for the API request
 params = {
     'start': 20040623,
     'end': 20040624,
@@ -14,6 +16,8 @@ params = {
     'header': 'false'
 }
 
+# Gets the data and makes sure it works
+#also important to look at data format from the API
 response = requests.get(url, params=params)
 if response.status_code == 200:
     data = response.text
