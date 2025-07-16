@@ -48,9 +48,9 @@ def main():
     # Importing the Fire Entry Data
     dataset = pd.read_csv('Final_Data.csv')
     # Extracting the required columns
-    lat = dataset.iloc[100:149,1].values
-    lon = dataset.iloc[100:149,2].values
-    date = dataset.iloc[100:149,9].values
+    lat = dataset.iloc[100:150,1].values
+    lon = dataset.iloc[100:150,2].values
+    date = dataset.iloc[100:150,9].values
 
     # Converting the Date format to YYYYMMDD
     date = [datetime.strptime(str(date), '%m/%d/%Y').strftime('%Y%m%d') for date in date]
